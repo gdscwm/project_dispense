@@ -6,7 +6,7 @@ import {Description, Example, Get, Returns} from "@tsed/schema";
 @Controller('/webhook')
 export class WebhookController {
     @Inject()
-    private flows: FlowService;
+    private flow: FlowService;
 
     @Inject()
     private python: PythonService;
