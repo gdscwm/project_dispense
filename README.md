@@ -7,7 +7,7 @@ Google Developer Student Club project at William & Mary to build a vending machi
 ## Setup
 ### 1. Prerequisites
 * [Python](https://www.python.org/downloads/) v.3.11.*
-* [Node.js](https://nodejs.org/en/) v.19.*
+* [Node.js](https://nodejs.org/en/) v.19.* **Very important! You need the `fetch` library.** 
 
 ### 2. Download
 Clone this repository to your computer
@@ -38,4 +38,4 @@ npm install # Installs dependencies
 ```Bash
 npm start # Hope it works ✨!
 ```
-> 🚨 If you're missing the .env file, obtain permission and [download](https://drive.google.com/file/d/1-tLHlH-VEuKWzolH9jh_zLcyXtPzguAI/view?usp=share_link) it to the `server` directory.
+> 🚨 If you're missing the .env file, obtain permission and [download](https://drive.google.com/file/d/1-tLHlH-VEuKWzolH9jh_zLcyXtPzguAI/view?usp=share_link) it to the `server` directory. You will need to rename the file and add a `.` in the front❗️
