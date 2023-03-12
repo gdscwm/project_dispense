@@ -35,7 +35,7 @@ Install required dependencies for the NPM project.
 cd server
 npm install # Installs dependencies
 ```
+> 🚨 If you're missing the .env file, obtain permission and [download](https://drive.google.com/file/d/1-tLHlH-VEuKWzolH9jh_zLcyXtPzguAI/view?usp=share_link) it to the `server` directory. You will need to rename the file and add a `.` in the front❗️
 ```Bash
 npm start # Hope it works ✨!
 ```
-> 🚨 If you're missing the .env file, obtain permission and [download](https://drive.google.com/file/d/1-tLHlH-VEuKWzolH9jh_zLcyXtPzguAI/view?usp=share_link) it to the `server` directory. You will need to rename the file and add a `.` in the front❗️
