@@ -17,7 +17,7 @@ export class WebhookController {
     @Example('Success!')
     async test() {
       await this.python.spawn(
-          "/Users/jlap/Documents/code/gdc/Project-Dispense/scripts/test.py",
+          "../scripts/test.py",
           ["test", "test2"]
       );
 
