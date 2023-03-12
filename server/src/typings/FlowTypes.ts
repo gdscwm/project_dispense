@@ -1,13 +1,13 @@
 interface FlowResult {
     status: number;
     message: string | null;
-    body: UserRecord | null;
+    body: Patron | null;
 }
 
 /**
  * The body of the response from the flow endpoint
  */
-type UserRecord = {
+type Patron = {
     email: string;
     firstName: string;
     lastName: string;
