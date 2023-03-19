@@ -39,3 +39,5 @@ npm install # Installs dependencies
 ```Bash
 npm start # Hope it works ✨!
 ```
+## Diagram
+[<img src="diagram.png">](http://example.com/)
