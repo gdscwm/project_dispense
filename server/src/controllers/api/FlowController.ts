@@ -10,6 +10,6 @@ export class FlowController {
 
     @Post('/test')
     async upload(@BodyParams() body: object) {
-        await this.flow.send(body);
+        return await this.flow.send(body);
     }
 }

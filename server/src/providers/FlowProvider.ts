@@ -42,7 +42,7 @@ export class FlowService {
      * @param url
      * @private
      */
-    private async poll(url: string): Promise<{ status: number, message: string | null}> {
+    private async poll(url: string): Promise<FlowResult> {
         const res = await fetch(url);
 
         switch (res.status) {
@@ -53,18 +53,21 @@ export class FlowService {
             default:
                 return {
                     status: res.status,
-                    message: res.headers.get('message')
+                    message: res.headers.get('message'),
+                    // If body is missing, this will throw an error. Ensure the flow returns a body, even if it is empty
+                    body: await res.json()
                 }
         }
     }
 
-    private handleFlowResult(result: { status: number, message: string | null}) {
+    private handleFlowResult(result: FlowResult) {
         switch (result.status) {
             case 200:
-                this.logger.info('Flow completed with 200 status');
+                this.logger.info(result.body);
+                this.logger.info('Flow completed with status 200');
                 return;
             default:
-                this.logger.error(`Flow failed with status ${result.status} and message ${result.message}`);
+                this.logger.error(`Flow failed with status ${result.status} and message "${result.message}"`);
                 throw new BadRequest(result.message || 'Unknown error while executing flow')
         }
     }
